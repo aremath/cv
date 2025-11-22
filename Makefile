@@ -1,10 +1,10 @@
 .PHONY: default
-default: cv-pmawhorter.pdf
+default: cv-rmawhorter.pdf
 
 .PHONY: clean
 clean:
-	rm cv-pmawhorter.pdf cv-pmawhorter.aux cv-pmawhorter.log cv-pmawhorter.out
+	rm cv-rmawhorter.pdf cv-rmawhorter.aux cv-rmawhorter.log cv-rmawhorter.out
 
-cv-pmawhorter.pdf: cv-pmawhorter.tex
-	xelatex cv-pmawhorter.tex
-	xelatex cv-pmawhorter.tex
+cv-rmawhorter.pdf: cv-rmawhorter.tex
+	xelatex cv-rmawhorter.tex
+	xelatex cv-rmawhorter.tex

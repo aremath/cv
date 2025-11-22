@@ -1,0 +1,256 @@
+\documentclass[11pt]{article}
+
+% Layout
+\usepackage[top=0.9in,left=0.9in,right=0.9in,bottom=0.9in]{geometry}
+\usepackage{tabularx}
+\usepackage{changepage}
+\usepackage{hanging}
+\usepackage{calc}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+\usepackage{setspace} \setstretch{1.0}
+
+% Typography
+%\usepackage{tgpagella}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\usepackage{microtype}
+
+% Color
+\usepackage{xcolor}
+\definecolor{linkblue}{rgb}{0, 0.3, 1.0}
+
+% Links
+\usepackage[colorlinks=true,urlcolor=linkblue]{hyperref}
+
+% Utilities
+\usepackage{xspace}
+
+% Structures
+\setlength{\parskip}{0pt plus 2pt minus 2pt}
+
+\newenvironment{sct}[1]{%
+  \vspace{8pt plus 2pt minus 4pt}\textbf{\Large #1} \hrulefill\vspace{6pt}
+  \begin{adjustwidth}{6pt}{0pt}
+}{%
+  \end{adjustwidth}
+}
+\newenvironment{pubs}[1]{%
+  \vspace{8pt}\textbf{\Large #1} \hrulefill\vspace{6pt}
+  \begin{adjustwidth}{14pt}{0pt}
+  %\raggedright
+  \setlength{\parskip}{4pt}
+  \setlength{\parindent}{-8pt}
+}{%
+  \end{adjustwidth}
+}
+\newcommand{\work}[1]{\textit{#1}\xspace}
+\newcommand{\edu}[3]{\textbf{#1}, #2, \textit{#3.}}
+\newcommand{\indented}[1]{\hspace*{\fill}\parbox{\textwidth-22pt}{#1}}
+\newcommand{\experience}[6]{%
+  \textbf{#1} #2, \textit{#3.} \\
+  #4, \textit{#5} \\
+  \indented{#6}
+  \vspace{7pt plus 2pt minus 2pt}
+}
+\newcommand{\teachingexperience}[7]{%
+  \textbf{#1} #2, \textit{#3.} \\
+  \textit{#4}, #5, \textit{#6} \\
+  \indented{#7}
+  \vspace{7pt plus 2pt minus 2pt}
+}
+\newcommand{\combexp}[4]{%
+  \textbf{#1} #2, \textit{#3.} \\
+  #4 \vspace{7pt plus 2pt minus 2pt}
+}
+\newcommand{\pub}[3]{%
+\begin{samepage}
+#1. ``#2.'' \textit{#3.}
+
+\end{samepage}%
+}
+
+\newcommand{\plainpub}[4]{%
+\begin{samepage}
+#1. ``#2.'' #3, #4.
+
+\end{samepage}%
+}
+
+\newcommand{\fullpub}[5]{%
+\begin{samepage}
+#1. ``#2.'' \textit{#3,} #4, #5.
+
+\end{samepage}%
+}
+
+\newcommand{\nppub}[4]{%
+\begin{samepage}
+#1. ``#2.'' \textit{#3,} #4.
+
+\end{samepage}%
+}
+
+\newcommand{\heading}[1]{\textbf{\large #1}\vspace{4pt}}
+
+\newcommand{\tsup}[1]{\textsuperscript{#1}}
+
+\begin{document}
+
+\textbf{\huge Ross Mawhorter }\hrulefill\vspace{6pt}
+
+\begin{tabularx}{\textwidth}{X r}
+690 N. Fairview Ave. & rmawhorter@g.hmc.edu \\
+Goleta, CA 93117 & 909-524-6463 \\
+\end{tabularx}
+
+\begin{sct}{Education}
+
+\edu{University of California Santa Cruz}{Ph.D. Computer Science}{August 2025}
+
+\edu{Harvey Mudd College}{B.Sc. Computer Science and Mathematics}{December 2019}
+
+\end{sct}
+
+\begin{pubs}{Publications}
+
+\vspace{6pt}
+% Not sure why this hspace is necessary and \noindent won't work here...
+\hspace*{-0.8em}\heading{Dissertation}
+
+\plainpub{Ross Mawhorter}{Certified Synthesis for Interactive Media: High Assurance Metroidvania Generation}{\hfill\break Available: \url{https://escholarship.org/content/qt030958w4/qt030958w4.pdf}}{2025}
+
+\vspace{6pt}
+\heading{Journal and Conference Papers}
+
+\fullpub{Ross Mawhorter and Adam M. Smith}{Analytic Procgen with Composable Design Space Expressions}{Proceedings of the 20th International Conference on the Foundations of Digital Games}{No. 28}{2025}
+
+\fullpub{Abdelrahman Madkour, Ross Mawhorter, Stacy Marsella, Adam M. Smith, and Steven Holtzen}{Ahead-of-time Compilation for Diverse Samplers of Constrained Design Spaces}{Proceedings of the 19th International Conference on the Foundations of Digital Games}{No. 54}{2024}
+
+\fullpub{Ross Mawhorter and Adam M. Smith}{Comprehensive and Instantly Responsive Player Assistance using Binary Decision Diagrams}{Proceedings of the 19th International Conference on the Foundations of Digital Games}{No. 21}{2024}
+
+\fullpub{Nuo Liu, Tonatiuh A Gonzalez, Jacob Fischer, Chan Hong, Michelle Johnson, Ross Mawhorter, Fabrizia Mugnatto, Rachael Soh, Shifa Somji, Joseph S Wirth, Ran Libeskind-Hadas, Eliot C Bush}{XenoGI 3: Using the DTLOR Model to Reconstruct the Evolution of Gene Families in Clades of Microbes}{BMC Bioinformatics}{Vol. 24, No. 295}{2023}
+
+\fullpub{Ross Mawhorter and Adam Smith}{Automated Testing in Super Metroid with Abstraction-Guided Exploration}{Proceedings of the 18th International Conference on the Foundations of Digital Games}{No. 21}{2023}
+
+\fullpub{Samuel Shields, Ross Mawhorter, Edward Melcer, and Michael Mateas}{Searching for Balanced 2D Brawler Games: Successes and Failures of Automated Evaluation}{Proceedings of the 18th AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment}{Vol. 18, No. 1}{2022}
+
+\fullpub{Ross Mawhorter, Batu Aytemiz, Isaac Karth, and Adam M. Smith}{Content Reinjection for Super Metroid}{Proceedings of the 17th AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment}{Vol. 17, No. 1}{2021}
+
+\fullpub{Santi Santichaivekin, Qing Yang, Jingyi Liu, Ross Mawhorter, Justin Jiang, Trenton Wesley, Yi-Chieh Wu, and Ran Libeskind-Hadas}{eMPRess: a Systematic Cophylogeny Reconciliation Tool}{Bioinformatics}{Vol. 37, Issue 16}{2021}
+
+\fullpub{Ross Mawhorter and Adam M. Smith}{Softlock Detection for Super Metroid with Computation Tree Logic}{Proceedings of the 16th International Conference on the Foundations of Digital Games}{No. 7}{2021}
+
+\fullpub{Isaac Karth, Batu Aytemiz, Ross Mawhorter, and Adam M. Smith}{Neurosymbolic Map Generation with VQ-VAE and WFC}{Proceedings of the 16th International Conference on the Foundations of Digital Games}{No. 43}{2021}
+
+\fullpub{Jingyi Liu, Ross Mawhorter, Nuo Liu, Santi Santichaivekin, Eliot Bush, and Ran Libeskind-Hadas}{Maximum Parsimony Reconciliation in the DTLOR model}{BMC Bioinformatics}{Vol. 22, No. 394}{2021}
+
+\fullpub{Santi Santichaivekin, Ross Mawhorter, and Ran Libeskind-Hadas}{An Efficient, Exact Algorithm for Computing all Pairwise Distances Between Reconciliations in the Duplication-Transfer-Loss Model}{BMC Bioinformatics}{Vol. 20, No. 636}{2019}
+
+\fullpub{Ross Mawhorter, Nuo Liu, Ran Libeskind-Hadas, and Yi-Chieh Wu}{Inferring Pareto-Optimal Reconciliations Across Multiple Event Costs Under the Duplication-Loss-Coalescence Model}{BMC Bioinformatics}{Vol. 20, No. 639}{2019}
+
+\fullpub{Ross Mawhorter and Ran Libeskind-Hadas}{Hierarchical Clustering of Maximum Parsimony Reconciliations}{BMC Bioinformatics}{Vol. 20, No. 612}{2019}
+
+\fullpub{Haoxing Du, Yi Sheng Ong, Marina Knittel, Ross Mawhorter, Nuo Liu, Gianluca Gross, Reiko Tojo, Ran Libeskind-Hadas, and Yi-Chieh Wu}{Multiple Optimal Reconciliations Under the Duplication-Loss-Coalescence Model}{IEEE/ACM Transactions on Computational Biology and Bioinformatics}{Vol. 18, Issue 6}{2019}
+
+\nppub{Daniel Johnson, Daniel Gorelik, Ross Mawhorter, Kyle Suver, Weiqing Gu, Steven Xing, Cody Gabriel, and Peter Sankhagowit}{Latent Gaussian Activity Propagation: Using Smoothness and Structure to Separate and Localize Sounds in Large Noisy Environments}{Advances in Neural Information Processing Systems 31 (NeurIPS 2018)}{2018}
+
+\nppub{(Contributor) Marco Gaboardi, James Honaker, Gary King, Jack Murtagh, Kobbi Nissim, Jonathan Ullman, Salil Vadhan}{Psi ({$\Psi$}): a Private Data Sharing Interface}{arXiv preprint: arXiv:1609.04340}{2018}
+
+\vspace{6pt}
+\heading{Past Demos, Workshop Papers, and Short Papers}
+
+\fullpub{Ross Mawhorter, Peter Mawhorter, and Adam M. Smith}{The Randomizer Community does Procedural Content Generation Research}{Proceedings of the 17th International Conference on the Foundations of Digital Games}{No. 68}{2022}
+
+\nppub{Peter Mawhorter, Indira Ruslanova, and Ross Mawhorter}{Representing Exploration in Metroidvania Games}{13th Workshop on Procedural Content Generation}{2022}
+
+\nppub{Anton Xue, Ross Mawhorter, Gian Pietro Farina, and Stephen Chong}{Towards the Formalization and Analysis of R}{Student Forum at Formal Methods in Computer-Aided Design}{2018}
+
+\end{pubs}
+
+\begin{sct}{Research Positions}
+
+\experience{Independent Research}{}{Goleta, CA}%
+{\emph{Independent}}{Summer 2025--present}{
+    I am currently purusing a number of different research projects in a variety of different subfields. I am extending my past work on medians for Maximum Parsimony Reconciliations to find median assignments in Satisfiability problems. I am generalizing the architectural concept of isovists to create better space-partitioning methods, and I am continuing my dissertation research on procedural level design for metroidvania games.
+}
+
+\experience{Researcher}{University of California Santa Cruz}{Santa Cruz, CA}%
+{Professor Adam M. Smith}{Spring 2020--Summer 2025}{
+    I worked with Professor Smith on a large set of problems related to automated design reasoning about videogames. I developed novel methods for automated game exploration that use gameplay abstractions to develop improved heuristics. I created automated gameplay analysis engines based on Binary Decision Diagrams. Finally, I used these automated analysis techniques to create a system that can synthesize level designs to a specification.
+}
+
+\experience{Research Assistant}{Harvey Mudd College}{Claremont, CA}%
+{Professors Libeskind-Hadas and Bush}{Summer 2018 and Summer 2020}{
+    I worked with Professor Libeskind-Hadas on a variety of computational biology problems. I developed, implemented, and analyzed algorithms for optimal evolutionary tree reconciliation. I developed analysis techniques that analyze the space of solutions beyond simply using the maximum parsimony heuristic. I helped to create a tool (eMPRess) that allows biologists to analyze the shared history of coevolving species.
+}
+
+\end{sct}
+
+%\newpage
+
+\begin{sct}{Teaching Positions}
+
+\combexp{Teaching Assistant}{University of California Santa Cruz}{Santa Cruz, CA}%
+{
+\textit{CSE 210A: Programming Languages}, Professor Arden, \textit{Spring 2025, Spring 2023} \\
+\indented{
+    A graduate-level course about the theory of programming languages, taught primarily in Coq (covering Volumes 1 and 2 of the Software Foundations texbooks). I taught two weekly sections, covering automated theorem proving, basic programming language design (implementing the simply-typed lambda calculus), and program analysis with inductive proofs. I also graded student submissions for written problems.
+}
+\vspace{6pt}
+
+\textit{CSE 201: Analysis of Algorithms}, Professor Seshadhri, \textit{Winter 2025} \\
+\indented{
+    A graduate-level course on algorithm theory and analysis. I taught a weekly section covering graph algorithms, dynamic programming, divide-and-conquer algorithms, and other general theory topics. I also graded student assignments and exams (written proofs), and helped to implement assignments where students were asked to analyze and critique proofs generated by ChatGPT. I also proofread and provided feedback on exam questions.
+}
+\vspace{6pt}
+
+\textit{CSE 102: Introduction to Algorithms}, Professors Bailey \textit{Fall 2024}, Lodha \textit{Spring 2022, Winter 2020}, Fremont \textit{Winter 2022, Winter 2021},  \\
+\indented{
+    An undergraduate course on algorithm design and running time analysis. I taught a weekly section and graded student exams, as well as providing input on exam questions or writing exams.
+}
+\vspace{6pt}
+
+\textit{CSE 120: Computer Architecture}, Professor Nath, \textit{Spring 2024, Winter 2023, Fall 2022, Fall 2021} \\
+\indented{
+    An undergraduate course on processor design and other computer architecture concepts. I taught a weekly section covering RISC-V assembly language, pipelined (in-order) processor execution, cache design, and basic branch prediction. I also graded student homework and exams.
+}
+\vspace{6pt}
+
+\textit{CSE 114A: Foundations of Programming Languages}, Professor Flanagan, \textit{Winter 2024} \\
+\indented{
+    An undergraduate class on programming language theory, with programming assignments in Haskell. I taught a weekly section, and I helped students learn how to use Haskell during office hours (and via Piazza).
+}
+\vspace{6pt}
+
+\textit{CSE 112: Comparative Programming Languages}, Professor Mackey, \textit{Spring 2021} \\
+\indented{
+    An undergraduate class on programming language design, with programming assignments in a wide variety of languages. I taught a weekly section, as well as helping students with assignments in Scheme, Ocaml, Smalltalk, Perl, and Prolog.
+}
+
+% end of combexp
+}
+
+\combexp{Teaching Assistant}{Harvey Mudd College}{Claremont, CA}
+{
+\textit{CS 142 HM: Computational Complexity}, Professor Libeskind-Hadas, \textit{Spring 2019} \\
+\indented{Worked as a grader/tutor for a course on computational complexity, covering a wide variety of topics: Rice's Theorem, the Recursion Theorem, the Cook-Levin Theorem, the Polynomial Hierarchy, PSPACE-, NL-, and \#P-completeness, Approximation schemes for NP-complete problems, the speedup, hierarchy, and gap theorems. I graded and gave feedback on student homework and held tutoring hours where I helped students with homework problems. I also responded to students' online questions.}
+\vspace{6pt}
+
+\textit{CS 131: Programming Languages}, Professors Stone and O'Neill, \textit{Fall 2018 -- Spring 2018} \\
+\indented{Worked as a grader/tutor for a course on programming language design, primarily taught in Haskell, but also covering concurrency with C, C++, and Go. Primarily, I held office hours where I helped students with writing assignment code. I also gave students feedback about the style of their submitted code.}
+\vspace{6pt}
+
+\textit{CS 181: Software Verification}, Professors Bang, \textit{Fall 2018} \\
+\indented{Worked as a grader/tutor for a course on program verification, covering symbolic model checking with temporal logics (LTL and CTL) and Binary Decision Diagrams.}
+\vspace{6pt}
+
+\textit{CS 140: Algorithms}, Professors Libeskind-Hadas and Boerkoel, \textit{Fall 2017} \\
+\indented{Worked as a grader/tutor for a course on algorithm design, covering divide-and-conquer, greedy algorithms, dynamic programming, and an introduction to NP-hardness. I graded and gave feedback on student homework and held tutoring hours where I helped students with homework problems. I also responeded as students' online questions.}
+
+% end of combexp
+}
+
+\end{sct}
+
+\end{document}
